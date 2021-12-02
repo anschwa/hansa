@@ -1,0 +1,62 @@
+* The Hanseatic Text Editor
+#+begin_src text
+#####    ##         ##            ##### #     ##      #######       ##### ##
+  ######  /  #### /   /####         ######  /#    #### / /       ###  ######  /### /
+ /#   /  /   ####/   /  ###        /#   /  / ##    ###/ /         ## /#   /  / ###/
+/    /  /    # #        /##       /    /  /  ##    # #  ##        # /    /  /   ##
+    /  /     #         /  ##          /  /    ##   #     ###            /  /
+   ## ##     #         /  ##         ## ##    ##   #    ## ###         ## ##
+   ## ##     #        /    ##        ## ##     ##  #     ### ###       ## ##
+   ## ########        /    ##        ## ##     ##  #       ### ###     ## ######
+   ## ##     #       /      ##       ## ##      ## #         ### /##   ## #####
+   ## ##     ##      /########       ## ##      ## #           #/ /##  ## ##
+   #  ##     ##     /        ##      #  ##       ###            #/ ##  #  ##
+      /       ##    #        ##         /        ###             # /      /
+  /##/        ##   /####      ##    /##/          ##   /##        /   /##/         /
+ /  #####      ## /   ####    ## / /  #####           /  ########/   /  ##########/
+/     ##         /     ##      #/ /     ##           /     #####    /     ######
+#                #                #                  |              #
+ ##               ##               ##                 \)             ##
+ #+end_src
+
+* Motivation
+
+* Keybindings
+Hanse implements a small subset of the standard ~readline(3)~
+keybindings and inherits some conventions from Emacs as well.
+
+** Navigation
+- ~C-a~ Move to beginning of line.
+- ~C-e~ Move to end of line.
+- ~C-f~ Move cursor forward one character.
+- ~C-b~ move cursor backwards one character.
+- ~C-n~ Move cursor to the next line.
+- ~C-p~ Move cursor to the previous line.
+- ~M-f~ Move cursor forward one word
+- ~M-b~ Move cursor backwards one word
+- ~C-r~ Incremental search backwards.
+- ~C-s~ Incremental search forwards.
+- ~C-/~ Incremental undo.
+
+** Line Editing
+- ~C-h~ Delete character before the cursor.
+- ~C-d~ Delete character under the cursor.
+- ~C-k~ Kill (cut) forewords until the end of line.
+- ~C-u~ Kill (cut) backwards to beginning of line.
+- ~C-w~ Kill (cut) backwards to the start of the current word.
+- ~M-d~ Kill (cut) forewords to the end of the current word.
+- ~C-y~ Yank (paste) from kill ring.
+- ~M-y~ Yank (paste) a previous item in the kill ring.
+- ~M-w~ Save region to the kill ring (copy).
+- ~M-c~ Capitalize word.
+- ~M-u~ Uppercase word.
+- ~M-l~ Lowercase word.
+
+** Buffer and Editor
+- ~C-g~, ~ESC~ Abort current command or action.
+- ~C-j~, ~C-m~ Same as enter/return key.
+- ~C-l~ Recenter buffer with the cursor at the top, bottom, or center.
+- ~TAB~ Execute completion at point.
+- ~C-SPC~ Begin selection. Successive invocations extend the selection by semantic units.
+- ~M-SPC~ Execute command by name.
+- ~M-.~ Repeat last command.
